@@ -10,40 +10,87 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body    {background: #e6eff6; margin:0; padding:0; font-family: Arial, Helvetica, sans-serif;}
+    
+    /* Grid design */
+    .grid-container 
+            {width: 635px; height: 478px; margin: 120px auto 20px auto; background-color: white; border-radius: 15px; display: grid; grid-template-columns: auto auto; box-shadow: 5px 10px #d8e1e7;}
+    .item1  {grid-column-start: 1; grid-column-end: 3;}
+
+   
+    header  {height: 126px; padding-top: 18px; padding-left: 38px; padding-bottom: 72px;}
+    Main, aside
+            {height: 202px; color: white; padding-left: 38px; padding-top: 20px; padding-bottom: 36px;}
+
+    Main    {width: 276px; background-color: #2bb3b1; border-bottom-left-radius: 15px;}
+    aside   {width: 283px; background-color: #4abebd; border-bottom-right-radius: 15px;}
+
+
+    input   {border-style: none; padding: 16px 90px; border-radius: 5px; background-color: #bfdf32; font-weight: 600; color: white; margin-top: 28px; cursor: pointer; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
+    input:hover {transform: translate(0px, -2px);}
+
+
+    /* Header font style */
+    h2      {color: #3eaba4;}
+    .item1 > h4      
+            {color: #bcdd3e;}
+    article {color: #acabb5; line-height: 1.8; font-size: 14px;}
+
+
+    /* Main & aside font style */
+    p               {color:  #e3ebf3; line-height: 1.5; font-size: 13px; margin: 0;}
+    .price          {display: flex; align-items: center; color: #70dadd;}
+    .price-dollar   {font-size: 30px; margin-right: 10px; color: white;}
+
+
+
+    .attribution    { font-size: 11px; text-align: center; color: black;}
+    .attribution a  { color: hsl(228, 45%, 44%); color: green;}
   </style>
 </head>
 <body>
-  Join our community
 
-  30-day, hassle-free money back guarantee
+  <section class="grid-container">
+    <!-- Header -->
+    <header class="item1">
+      <h2>Join our community</h2>
+      <h4>30-day, hassle-free money back guarantee</h4>
+      <article>
+        Gain access to our full library of tutorials along with expert code reviews. <br>
+        Perfect for any developers who are serious about honing their skills.
+      </article>
+    </header>
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+    <!-- Main -->
+    <Main class="item2">
+      <h4>Monthly Subscription</h4>
+      <p class="price"><span class="price-dollar">&dollar;29</span> per month</p>
+      <p>Full access for less than &dollar;1 a day</p>
+      <input type="button" value="Sign Up">
+    </Main>
 
-  Monthly Subscription
+    <!-- Right -->
+    <aside class="item3">
+      <h4>Why Us</h4>
+      <p>
+        Tutorials by industry experts <br>
+        Peer &amp; expert code review <br>
+        Coding exercises              <br>
+        Access to our GitHub repos    <br>
+        Community forum               <br>
+        Flashcard decks               <br>
+        New videos every week
+      </p>
+    </aside>
 
-  &dollar;29 per month
 
-  Full access for less than &dollar;1 a day
 
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
+  </section>
   
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Kittiphat Pisuittiporn</a>.
     </p>
   </footer>
 </body>
